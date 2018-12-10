@@ -1,1 +1,13 @@
-h1{color:#3535b6;font-size:3.5rem}
+h1 {
+  color: #3535b6;
+  font-size: 3.5rem; }
+
+.code {
+  background-color: #b4b1b1;
+  border-radius: 5px;
+  display: block;
+  margin: 2rem auto;
+  padding: 2rem;
+  width: 30rem; }
+  .code span {
+    display: block; }
