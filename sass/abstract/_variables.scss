@@ -3,8 +3,10 @@
 // Colors
 //
 ///////////////////////
+$color-black: #252525;
 $color-primary: #545457;
 $color-secondary: #b4b4b7;
+$color-white: #eee;
 
 ///////////////////////
 //
@@ -12,3 +14,11 @@ $color-secondary: #b4b4b7;
 //
 ///////////////////////
 $default-font-size: 1.6rem;
+
+///////////////////////
+//
+// gutter size
+//
+///////////////////////
+$gutter: 5rem;
+$navbar-width: 40vw;

@@ -11,7 +11,9 @@ html {
       font-size: 75%; } }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  color: #252525;
+  font-size: 1.6rem; }
 
 *,
 *::after,
@@ -20,12 +22,43 @@ body {
   padding: 0;
   box-sizing: inherit; }
 
+.main-doc {
+  position: relative; }
+  .main-doc .menu {
+    height: 100vh;
+    width: 40vw;
+    position: fixed; }
+    .main-doc .menu .navbar {
+      background-color: yellowgreen;
+      border-right: 5px solid #b4b4b7;
+      display: block;
+      padding: 5rem;
+      height: 100%;
+      width: 100%; }
+      .main-doc .menu .navbar__items {
+        display: block; }
+        .main-doc .menu .navbar__items .nav {
+          display: block; }
+  .main-doc .documentation {
+    margin-left: 40vw;
+    padding: 5rem; }
+
 .code {
-  background-color: #b4b1b1;
+  background-color: #b4b4b7;
   border-radius: 5px;
   display: block;
   margin: 2rem auto;
   padding: 2rem;
-  width: 30rem; }
+  width: 50rem; }
   .code span {
     display: block; }
+
+.footer {
+  background-color: #545457;
+  position: relative;
+  height: 15rem;
+  padding: 5rem;
+  text-align: center; }
+  .footer .copyright {
+    color: #eee;
+    font-size: 2rem; }
