@@ -1,4 +1,25 @@
-h1 {
-    color: $color-primary;
-    font-size: 3.5rem;
+html {
+    font-size: 62.5%;
+
+    @include respond(tablet-land) {
+        font-size: 56.25%;
+    }
+    @include respond(tablet-port) {
+        font-size: 50%;
+    }
+    @include respond(big-desktop) {
+        font-size: 75%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
 }
