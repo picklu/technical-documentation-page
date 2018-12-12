@@ -15,6 +15,12 @@ body {
   box-sizing: border-box;
   color: #252525;
   font-size: 1.6rem; }
+  @media (max-width: 75em) {
+    body {
+      font-size: 1.2rem; } }
+  @media (max-width: 56.25em) {
+    body {
+      font-size: 1rem; } }
 
 *,
 *::after,
@@ -23,37 +29,56 @@ body {
   padding: 0;
   box-sizing: inherit; }
 
-.main-doc {
-  position: relative; }
-  .main-doc .menu {
-    height: 100vh;
-    width: 40vw;
-    position: fixed; }
-    .main-doc .menu .navbar {
-      background-color: yellowgreen;
-      border-right: 5px solid #b4b4b7;
-      display: block;
-      padding: 5rem;
-      height: 100%;
-      width: 100%; }
-      .main-doc .menu .navbar__items {
-        display: block; }
-        .main-doc .menu .navbar__items .nav {
-          display: block; }
-  .main-doc .documentation {
-    margin-left: 40vw;
-    padding: 5rem; }
-
-.code {
-  background-color: #b4b4b7;
-  border-radius: 5px;
+.navbar {
+  background-color: yellowgreen;
+  border-right: 5px solid #b4b4b7;
   display: block;
-  font-family: 'Courier New', Courier, monospace;
-  margin: 2rem auto;
-  padding: 2rem;
-  width: 50rem; }
-  .code span {
+  height: 100vh;
+  width: 40vw;
+  display: block;
+  padding: 5rem;
+  position: fixed; }
+  @media (max-width: 75em) {
+    .navbar {
+      width: 30vw; } }
+  @media (max-width: 56.25em) {
+    .navbar {
+      border: none;
+      height: 50vh;
+      width: 100%;
+      padding: 1.5rem;
+      position: relative; } }
+  .navbar__items {
     display: block; }
+    .navbar__items .nav {
+      display: block; }
+
+.documentation {
+  margin-left: 40vw;
+  padding: 5rem; }
+  @media (max-width: 75em) {
+    .documentation {
+      margin-left: 30vw; } }
+  @media (max-width: 56.25em) {
+    .documentation {
+      margin-left: 0;
+      padding: 1.5rem; } }
+  .documentation .main-section {
+    display: block; }
+  .documentation .code {
+    background-color: #b4b4b7;
+    border-radius: 5px;
+    display: block;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 2rem auto;
+    padding: 2rem;
+    width: 30rem; }
+    @media (max-width: 56.25em) {
+      .documentation .code {
+        width: 100%; } }
+    .documentation .code span {
+      display: block;
+      width: 100%; }
 
 .footer {
   background-color: #545457;
@@ -61,6 +86,12 @@ body {
   height: 15rem;
   padding: 5rem;
   text-align: center; }
+  @media (max-width: 75em) {
+    .footer {
+      padding: 1.5rem; } }
   .footer .copyright {
     color: #eee;
     font-size: 2rem; }
+    @media (max-width: 75em) {
+      .footer .copyright {
+        font-size: 1rem; } }

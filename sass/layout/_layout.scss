@@ -1,47 +1,69 @@
-.main-doc {
-    position: relative;
-
-    .menu {
-        height: 100vh;
-        width: $navbar-width;
-        position: fixed;
-
-        .navbar {
-            background-color: yellowgreen;
-            border-right: 5px solid $color-secondary;
-            display: block;
-            padding: $gutter;
-            height: 100%;
-            width: 100%;
-
-            &__items {
-                display: block;
-
-                .nav {
-                    display: block;
-                    
-                }
-            }
-        }
+.navbar {
+    background-color: yellowgreen;
+    border-right: 5px solid $color-secondary;
+    display: block;
+    height: 100vh;
+    width: $navbar-width;
+    display: block;
+    padding: $gutter;
+    position: fixed;
+    
+    @include respond(tablet-land) {
+        width: $navbar-width-small;
+    }
+    
+    @include respond(tablet-port) {
+        border: none;
+        height: 50vh;
+        width: 100%;
+        padding: $gutter-small;
+        position: relative;
     }
 
-    .documentation {
-        margin-left: $navbar-width;
-        padding: $gutter;
+    &__items {
+        display: block;
+
+        .nav {
+            display: block;
+            
+        }
     }
 }
 
-.code {
-    background-color: $color-secondary;
-    border-radius: 5px;
-    display: block;
-    font-family: 'Courier New', Courier, monospace;
-    margin: 2rem auto;
-    padding: 2rem;
-    width: 50rem;
-    
-    span {
+.documentation {
+    margin-left: $navbar-width;
+    padding: $gutter;
+
+    @include respond(tablet-land) {
+        margin-left: $navbar-width-small;
+    }
+
+    @include respond(tablet-port) {
+        margin-left: 0;
+        padding: $gutter-small;
+    }
+
+    .main-section {
         display: block;
+    }
+
+    .code {
+        background-color: $color-secondary;
+        border-radius: 5px;
+        display: block;
+        font-family: 'Courier New', Courier, monospace;
+        margin: 2rem auto;
+        padding: 2rem;
+        width: 30rem;
+
+        @include respond(tablet-port) {
+            width: 100%;
+        }
+
+        span {
+            display: block;
+            width: 100%;
+        }
     }
 }
 
@@ -52,8 +74,16 @@
     padding: $gutter;
     text-align: center;
 
+    @include respond(tablet-land) {
+        padding: $gutter-small;
+    }
+
     .copyright {
         color: $color-white;
         font-size: 2rem;
+
+        @include respond(tablet-land) {
+            font-size: 1rem;
+        }
     }
 }
