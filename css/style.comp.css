@@ -28,7 +28,7 @@ li {
   list-style: none; }
 
 .navbar {
-  border-right: 3px solid #b4b4b7;
+  border-right: 1px solid #252525;
   display: block;
   font-size: 2rem;
   padding-top: 2rem;
@@ -44,9 +44,10 @@ li {
   @media (max-width: 37.5em) {
     .navbar {
       border: none;
+      box-shadow: 0 3px 5px #545457;
       height: auto;
       width: 100%;
-      padding-top: 0;
+      padding-top: 1rem;
       position: relative; } }
   .navbar .header {
     font-size: 3rem;
@@ -58,7 +59,7 @@ li {
   .navbar__items {
     display: block; }
     .navbar__items .nav-link {
-      border-top: 2px solid #b4b4b7;
+      border-top: 1px solid #252525;
       display: block;
       padding: 2rem; }
       .navbar__items .nav-link:link, .navbar__items .nav-link:visited {
@@ -66,12 +67,15 @@ li {
         text-decoration: none; }
       .navbar__items .nav-link .nav {
         font-size: 2.5rem; }
+      @media (max-width: 37.5em) {
+        .navbar__items .nav-link {
+          padding: 1rem;
+          padding-left: 2rem; } }
       .navbar__items .nav-link:last-child {
-        border-bottom: 2px solid #b4b4b7; }
+        border-bottom: 1px solid #252525; }
       .navbar__items .nav-link:hover, .navbar__items .nav-link:active {
-        background-color: #b4b4b7;
+        background-color: #252525;
         background: linear-gradient(to bottom, #b4b4b7, #eee, #b4b4b7);
-        border: none;
         cursor: pointer; }
 
 .documentation {
@@ -87,12 +91,13 @@ li {
   @media (max-width: 37.5em) {
     .documentation {
       margin-left: 0;
-      padding: 0; } }
+      padding: 0;
+      padding-top: 1.5rem; } }
   .documentation .main-section {
     display: block;
     padding: 2rem; }
     .documentation .main-section .header {
-      border-bottom: 2px solid #b4b4b7;
+      border-bottom: 1px solid #252525;
       font-size: 2.5rem;
       margin-bottom: 2rem;
       padding-bottom: 1rem; }
@@ -124,8 +129,33 @@ li {
       display: block;
       width: 100%; }
 
+.up:link, .up:visited {
+  border-radius: 50%;
+  display: none;
+  text-decoration: none;
+  position: fixed;
+  right: 5rem;
+  bottom: 5rem;
+  height: 5rem;
+  width: 5rem; }
+  @media (max-width: 37.5em) {
+    .up:link, .up:visited {
+      display: block; } }
+
+.up span {
+  background-color: #252525;
+  opacity: .8;
+  border-radius: 50%;
+  color: #eee;
+  display: block;
+  font-size: 3rem;
+  height: 100%;
+  width: 100%;
+  padding: .7rem;
+  text-align: center; }
+
 .footer {
-  background-color: #545457;
+  background-color: #252525;
   position: relative;
   height: 15rem;
   padding: 5rem;
