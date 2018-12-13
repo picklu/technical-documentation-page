@@ -94,7 +94,8 @@ li {
     .documentation .main-section .header {
       border-bottom: 2px solid #b4b4b7;
       font-size: 2.5rem;
-      margin-bottom: 1rem; }
+      margin-bottom: 2rem;
+      padding-bottom: 1rem; }
     .documentation .main-section__list li {
       margin-left: 20%;
       padding-left: 2rem;
