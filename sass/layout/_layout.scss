@@ -1,5 +1,5 @@
 .navbar {
-    border-right: 3px solid $color-secondary;
+    border-right: 1px solid $color-black;
     display: block;
     font-size: 2rem;
     padding-top: 2rem;
@@ -16,9 +16,10 @@
     
     @include respond(phone) {
         border: none;
+        box-shadow: 0 3px 5px $color-primary;
         height: auto;
         width: 100%;
-        padding-top: 0;
+        padding-top: 1rem;
         position: relative;
     }
 
@@ -46,19 +47,23 @@
                 font-size: 2.5rem;
             }
 
-            border-top: 2px solid $color-secondary;
+            border-top: 1px solid $color-black;
             display: block;
             padding: 2rem;
 
+            @include respond(phone) {
+                padding: 1rem;
+                padding-left: 2rem;
+            }
+
             &:last-child {
-                border-bottom: 2px solid $color-secondary;
+                border-bottom: 1px solid $color-black;
             }
 
             &:hover,
             &:active {
-                background-color: $color-secondary;
+                background-color: $color-black;
                 background: linear-gradient(to bottom, $color-secondary, $color-white, $color-secondary);
-                border: none;
                 cursor: pointer;
             }
         }
@@ -80,6 +85,7 @@
     @include respond(phone) {
         margin-left: 0;
         padding: 0;
+        padding-top: $gutter-small;
     }
 
     .main-section {
@@ -87,7 +93,7 @@
         padding: 2rem;
 
         .header {
-            border-bottom: 2px solid $color-secondary;
+            border-bottom: 1px solid $color-black;
             font-size: 2.5rem;
             margin-bottom: 2rem;
             padding-bottom: 1rem;
