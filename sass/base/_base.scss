@@ -5,9 +5,11 @@ html {
     @include respond(tablet-land) {
         font-size: 56.25%;
     }
+
     @include respond(tablet-port) {
         font-size: 50%;
     }
+
     @include respond(big-desktop) {
         font-size: 75%;
     }
@@ -17,14 +19,7 @@ body {
     box-sizing: border-box;
     color: $color-black;
     font-size: $default-font-size;
-
-    @include respond(tablet-land) {
-        font-size: 1.2rem;
-    }
-
-    @include respond(tablet-port) {
-        font-size: 1rem;
-    }
+    min-width: 290px;
 }
 
 *,
@@ -33,4 +28,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+}
+
+li {
+    list-style: none;
 }
