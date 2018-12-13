@@ -129,6 +129,31 @@ li {
       display: block;
       width: 100%; }
 
+.up:link, .up:visited {
+  border-radius: 50%;
+  display: none;
+  text-decoration: none;
+  position: fixed;
+  right: 5rem;
+  bottom: 5rem;
+  height: 5rem;
+  width: 5rem; }
+  @media (max-width: 37.5em) {
+    .up:link, .up:visited {
+      display: block; } }
+
+.up span {
+  background-color: #252525;
+  opacity: .8;
+  border-radius: 50%;
+  color: #eee;
+  display: block;
+  font-size: 3rem;
+  height: 100%;
+  width: 100%;
+  padding: .7rem;
+  text-align: center; }
+
 .footer {
   background-color: #252525;
   position: relative;

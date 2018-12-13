@@ -138,6 +138,38 @@
     }
 }
 
+.up {
+
+    &:link,
+    &:visited {
+        border-radius: 50%;
+        display: none;
+        text-decoration: none;
+        position: fixed;
+        right: 5rem;
+        bottom: 5rem;
+        height: 5rem;
+        width: 5rem;
+
+        @include respond(phone) {
+            display: block;
+        }
+    }
+
+    span {
+        background-color: $color-black;
+        opacity: .8;
+        border-radius: 50%;
+        color: $color-white;
+        display: block;
+        font-size: 3rem;
+        height: 100%;
+        width: 100%;
+        padding: .7rem;
+        text-align: center;
+    }
+}
+
 .footer {
     background-color: $color-black;
     position: relative;
