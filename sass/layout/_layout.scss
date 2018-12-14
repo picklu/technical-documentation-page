@@ -35,7 +35,7 @@
 
     &__items {
         display: block;
-        height: 100%;
+        height: 70%;
         overflow-x: hidden;
         overflow-y: auto;
 
@@ -70,22 +70,10 @@
             }
         }
     }
-
-    // footer offset
-    .offset {
-        display: block;
-        height: 30rem;
-
-        @include respond(phone) {
-            display: none;
-        }
-    }
 }
 
-.documentation {
-    font-size: 2rem;
-    font-weight: 300;
-    line-height: 1.5;
+.documentation,
+.footer {
     margin-left: $navbar-width;
     padding: $gutter;
 
@@ -96,7 +84,16 @@
 
     @include respond(phone) {
         margin-left: 0;
-        padding: 0;
+        padding-top: $gutter-small;
+    }
+}
+
+.documentation {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.5;
+
+   @include respond(phone) {
         padding-top: $gutter-small;
     }
 
@@ -184,14 +181,8 @@
 
 .footer {
     background-color: $color-black;
-    position: relative;
     height: 15rem;
-    padding: $gutter;
     text-align: center;
-
-    @include respond(tablet-land) {
-        padding: $gutter-small;
-    }
 
     .copyright {
         color: $color-white;
