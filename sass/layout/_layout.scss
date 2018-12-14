@@ -75,6 +75,10 @@
     .offset {
         display: block;
         height: 30rem;
+
+        @include respond(phone) {
+            display: none;
+        }
     }
 }
 

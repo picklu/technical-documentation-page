@@ -82,6 +82,9 @@ li {
   .navbar .offset {
     display: block;
     height: 30rem; }
+    @media (max-width: 37.5em) {
+      .navbar .offset {
+        display: none; } }
 
 .documentation {
   font-size: 2rem;
