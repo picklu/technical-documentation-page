@@ -26,6 +26,7 @@
         font-size: 3rem;
         font-weight: 600;
         padding: 4rem;
+        text-shadow: 0 0 5px $color-black;
 
         @include respond(phone) {
             border: none;
@@ -38,9 +39,10 @@
         background-color: $color-secondary;
         background: linear-gradient(to top, $color-primary, $color-secondary);
         display: block;
-        height: 70%;
+        height: 60%;
         overflow-x: hidden;
         overflow-y: auto;
+        text-shadow: 0 0 5px $color-secondary;
 
         .nav-link {
             &:link,
@@ -67,10 +69,11 @@
 
             &:hover,
             &:active {
-                background-color: $color-black;
-                background: linear-gradient(to bottom, $color-primary, $color-black, $color-primary);
+                background-color: $color-primary;
+                background: linear-gradient(to bottom, lighten($color-primary, 20), lighten($color-black, 20), lighten($color-primary, 20));
                 color: $color-white;
                 cursor: pointer;
+                text-shadow: 0 0 5px $color-black;
             }
         }
     }
