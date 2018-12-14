@@ -3,7 +3,7 @@
     display: block;
     font-size: 2rem;
     padding-top: 2rem;
-    height: 100vh;
+    height: 100%;
     width: $navbar-width;
     display: block;
     position: fixed;
@@ -35,29 +35,31 @@
 
     &__items {
         display: block;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
 
         .nav-link {
             &:link,
             &:visited {
                 color: inherit;
                 text-decoration: none;
+                border-top: 1px solid $color-black;
+                display: block;
+                padding: 2rem;
+
+                @include respond(phone) {
+                    padding: 1rem;
+                    padding-left: 2rem;
+                }
+
+                &:nth-child(5) {
+                    border-bottom: 1px solid $color-black;
+               }
             }
 
             & .nav {
                 font-size: 2.5rem;
-            }
-
-            border-top: 1px solid $color-black;
-            display: block;
-            padding: 2rem;
-
-            @include respond(phone) {
-                padding: 1rem;
-                padding-left: 2rem;
-            }
-
-            &:last-child {
-                border-bottom: 1px solid $color-black;
             }
 
             &:hover,
@@ -67,6 +69,12 @@
                 cursor: pointer;
             }
         }
+    }
+
+    // footer offset
+    .offset {
+        display: block;
+        height: 30rem;
     }
 }
 
